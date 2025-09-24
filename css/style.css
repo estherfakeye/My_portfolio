@@ -1,0 +1,32 @@
+/* Base custom styles (complementing Tailwind) */
+:root {
+    color-scheme: light dark;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+}
+
+/* Accessibility helpers */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Hero, About, Projects, Contact placeholders to ensure visible height while empty */
+#hero, #about, #projects, #contact {
+    min-height: 100px;
+}
+
